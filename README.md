@@ -1,12 +1,10 @@
 # Doomsday: AI Alignment and the End of Humanity
 
-A research paper examining the AI alignment problem, arguments surrounding
-AI-driven human extinction, and the assumptions underlying predictions of
-existential catastrophe.
+This is a reaserch paper exploring the AI crisis and explaints the facts from assumptions.
 
 ## Status
 
-🚧 Research and writing in progress
+Research & Writing In progress
 
 ## Research Questions
 
@@ -24,8 +22,8 @@ existential catastrophe.
 
 ## Author
 
-Keegan
+Keegan Vitale
 
 ## Notice 
 
-**PLACEHOLDER README**
+**IF YOU ARE USING THIS PAPER FOR RESAERCH, PLEASE CITE**
