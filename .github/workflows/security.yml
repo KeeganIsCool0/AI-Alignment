@@ -1,0 +1,46 @@
+name: Security Scan
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  schedule:
+    - cron: '0 0 * * 1' # Runs every Monday at midnight
+
+# Core Principle: Enforce Least Privilege globally
+permissions:
+  contents: read
+
+jobs:
+  security-audit:
+    name: Run Hardened Security Scans
+    runs-on: ubuntu-latest
+    
+    # Restrict permissions explicitly to this job
+    permissions:
+      contents: read
+      security-events: write
+      actions: read
+
+    steps:
+      # Step 1: Securely checkout the repository code
+      # Uses: actions/checkout@v4.2.2 (Pinned to immutable SHA for supply chain security)
+      - name: Checkout Code
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+
+      # Step 2: Analyze workflow files for security risks and configuration bugs
+      # Uses: reviewdog/action-actionlint@v1
+      - name: Lint GitHub Actions Workflow Files
+        uses: reviewdog/action-actionlint@v1
+
+      # Step 3: Scan repository history for leaked secrets, API keys, and passwords
+      - name: Secret Scanning
+        uses: trufflesecurity/trufflehog@main
+        with:
+          path: ./
+          base: ${{ github.event.repository.default_branch }}
+          head: HEAD
+          extra_args: --debug --only-verified
