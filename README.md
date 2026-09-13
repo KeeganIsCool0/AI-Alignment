@@ -1,6 +1,15 @@
 # Doomsday: AI Alignment and the End of Humanity
 
-This is a reaserch paper exploring the AI crisis and explaints the facts from assumptions.
+<div align="center">
+![GitHub Repo stars](https://img.shields.io/github/stars/KeeganIsCool0/AI-Alignment)
+![GitHub forks](https://img.shields.io/github/forks/KeeganIsCool0/AI-Alignment) 
+</div>
+
+<div align="center">
+
+This is a research paper exploring the AI crisis and explaints the facts from assumptions.
+
+</div> 
 
 ## Status
 
