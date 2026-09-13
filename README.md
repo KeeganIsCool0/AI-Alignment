@@ -1,12 +1,8 @@
 # Doomsday: AI Alignment and the End of Humanity
 
 <div align="center">
-  [![License: CC BY-SA 4.0](https://shields.io)](https://creativecommons.org/licenses/by-sa/4.0/) 
-</div>
 
-<div align="center">
-
-This is a research paper exploring the AI crisis and explaints the facts from assumptions.
+This is a research paper exploring the AI crisis and explains the facts from assumptions.
 
 </div> 
 
