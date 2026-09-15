@@ -205,9 +205,6 @@
 	\subsection{Instrumental Convergence}
 	Instrumental convergence is the theory that for anything sufficiently intelligent to pursue similar intermediate sub-goals such as self preservation.
 	
-	\subsection{The Main Question}
-	How much problems do we have that scale into human extinction?
-	
 	\section{The Paperclip Maximizer}
 	The paperclip maximizer is a thought experiment created by Nick Bostrom in 2003 to show the dangers of a misaligned machine. A super intelligent AI is given a prompt, "maximize as much paperclips in the world" The computer starts making as much paperclips possible using standard factory materials. As the AI gets smarter, it finds out more ways to manufacture paperclips. However, it realizes humans might try to turn it off. Because a immediate shutdown stops paperclip production, the AI humans are major threat to its existence and mission. The AI does not mean to be malicious. This demonstrates Instrumental Convergence, as described previously.  This experiment simply shows self-preservation and resource acquisition of AI to maximize the production of paperclips.
 	
@@ -229,6 +226,14 @@
 	
 	\subsection{Where does AI development stop?}
 	If we have infinitely improving software (the AI), While the software itself can find ways to rewrite its own code, it will eventually run into physical reality. While hardware is finite, software cannot be infinite. The AI is simply limited by the laws of physics. The Launder Limit states that erasing, changing, or adding a bit of data always requires a minimum amount of energy. An infinitely improving AI would melt its hardware. The Bremermann's Limit calculates the maximum speed at which any piece of matter can process information. A computer can only process about: $$1.36 \times 10^{50}$$ bits per second per kilogram. Once the software reaches this speed, it cannot go any faster without adding more mass. Eventually, the software will reach "peak optimization" where the code is as perfect as mathematically possible with that specific piece of hardware.
+	
+	\vspace{7cm}
+	
+	\noindent\fbox{%
+		\parbox{0.9\textwidth}{%
+			\textbf{FLOPs:} This is the measure of compute power to a system.
+		}%
+	}
 	
 	\part{What Would Have to Happen?}
 	
@@ -256,12 +261,23 @@
 	
 	\begin{figure}[h!]
 		\centering
-		\includegraphics[width=1.0\linewidth]{../sources/Moors-Law}
-		\caption{Moors Law Chart (Courtesy of Wikipedia)}
-		\label{fig:moors-law}
+		\includegraphics[width=1.0\linewidth]{../sources/Transistor-Count-over-time}
+		\caption{Moor's Law Chart (Courtesy of Our World In Data)}
+		\label{fig:transistor-count-over-time}
 	\end{figure}
 	
+	
 	\section{Electricity Limits}
+	According to the U.S. Energy Information Administration, are pushing the U.S. power consumption to new highs. By 2028, more than half of all electricity going to data centers will be used for AI, consuming as much energy a 22 percent of all U.S. households. Even though AI data centers may take three to two years building, connecting them to the power grid can take up to ten years. Because AI requires plenty of computing power, means more electricity. If AI continues consuming more electricity, we may have an energy crisis on our hands.
+	
+	\section{Cooling Limits}
+	There are may risks and limits to cooling AI. Modern GPU's and servers consume massive amounts of electricity in tiny spaces. AI generates 300 to 500 percent more head density in s single rack, compared to regular servers. Airflow is also another problem. Air distribution units create uneven hot spaces, high noise, and risk of hardware damage. However, Newer NVIDIA GPUs use closed loop cooling with coolant temperatures up to 45°C.
+	
+	\section{Semiconductor Manufacturing}
+	Semiconductor Manufacturing is a crucial step in making AI possible. We need machines and people to manufacture semiconductors. However, as of 2026, we are currently in a RAM crisis. According to Micron, the current shortage is going to persist through 2027 and potentially into 2028, this means for the next few years, we are going to need humans to operate the fab labs. However, since the OpenAI RAM deal fell apart, some are calling for a slowdown, most likely causing more RAM deals to fall apart.
+	
+	\section{Physical Maintenance}
+	As discussed in the previous section, some RAM and semiconductor manufacturing requires using humans to transfer, test, and ultimately package wafers to be shipped. AI requires humans to build man infrastructure. We build data-centers, servers, and other physical frameworks that the average physical robot can't do. We also need maintenance personnel to take care and fix the robots and build servers. We also need electricians, plumbers, and carpenters to have fine motor skills.
 	
 	
 \end{document}
