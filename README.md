@@ -4,6 +4,8 @@
 
 This is a research paper exploring the AI crisis and explains the facts from assumptions.
 
+[Paper](./paper) · [Bibliography](./sources)
+
 </div> 
 
 ## Status
