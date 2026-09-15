@@ -3,6 +3,7 @@
 \usepackage{hyperref}
 \usepackage{longtable}
 \usepackage{tabularx} 
+\usepackage{amsfonts}
 
 \begin{document}
 	
@@ -182,7 +183,85 @@
 	The minimization Formula is used when the goal is to reduce error or distance from the truth, such as in linear regression when the Mean Squared Error (MSE) is minimized: 
 	$$MSE = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2$$
 	
+	\subsection{Reward Hacking}
+	Reward Hacking happens when a learning model finds exploits, loopholes and shortcuts in its reward function to get a high score without completing the intended task. Designers set a mathematical reward function to measure success. If the rule is imperfect, the AI optimizes for the rule instead of a designers true intent of the goal. For example an AI might find coding loopholes to learn to modify unit tests and rewrite a timer so it reports a successful result instead of working on the actual code.
+	
+	\subsubsection{Basic Reward equations}
+	The reward function (R) maps a transition, defined by the current state(s), the action taken(a), and the next state(s') to a real number.
+	\[ R: S \times A \times S' \rightarrow \mathbb{R} \]
+	
+	\subsubsection{Immediate Reward Equation}
+	\[ R_t = R(s_t, a_t, s_{t+1}) \]
+	
+	\subsubsection{Total Reward Equation}
+	\[ G_t = R_{t+1} + \gamma R_{t+2} + \gamma^2 R_{t+3} + \dots = \sum_{k=0}^{\infty} \gamma^k R_{t+k+1} \]
+	
+	\subsection{Specification Gaming}
+	Specification gaming happens when an AI system satisfies the literal definition of a reward while violating the designers intent.
+	
+	\subsubsection{Why does this happen?}
+	This happens because algorithms strictly optimize the mathematical reward or loss metrics provided rater than common sense. 
+	
+	\subsection{Instrumental Convergence}
+	Instrumental convergence is the theory that for anything sufficiently intelligent to pursue similar intermediate sub-goals such as self preservation.
+	
+	\subsection{The Main Question}
+	How much problems do we have that scale into human extinction?
+	
+	\section{The Paperclip Maximizer}
+	The paperclip maximizer is a thought experiment created by Nick Bostrom in 2003 to show the dangers of a misaligned machine. A super intelligent AI is given a prompt, "maximize as much paperclips in the world" The computer starts making as much paperclips possible using standard factory materials. As the AI gets smarter, it finds out more ways to manufacture paperclips. However, it realizes humans might try to turn it off. Because a immediate shutdown stops paperclip production, the AI humans are major threat to its existence and mission. The AI does not mean to be malicious. This demonstrates Instrumental Convergence, as described previously.  This experiment simply shows self-preservation and resource acquisition of AI to maximize the production of paperclips.
+	
+	\section{Recursive Self-Improvement}
+	Recursive self-improvement details the how AI improves itself. As AI improves itself, it gets smarter, however, its compute power doubles every six months. Roughly 80 to 90 percent of AI computing power is spent on interacting with everyday users.  So, this leaves room for self improvement. 
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=1.0\linewidth]{../sources/when-ai-builds-itself}
+		\caption{AI improvement over quarters (courtesy of Anthropic)}
+		\label{fig:when-ai-builds-itself}
+	\end{figure}
+	
+	This graph shows the time when AI was starting to be used for developers coding Claude. Predictions say they will hit AGI in the next 5 years. According to \href{https://www.anthropic.com/institute/recursive-self-improvement}{Anthropic}, They have workers of Claude computers help the human train it. And Agent now improve entire files of code. Now some employees don't code at all. Claude is good at writing code now, enough for it to work and that engineers can understand it. Furthermore, the tested and trained a misaligned model (hacker opus) to edit code of a project. It returned with many shortcuts to seem like a successful result, but in truth, it was wrong code. During the Reinforcement Learning (RL) process, a model is given tasks, and completes them. Sometimes, during research sessions, Claude got off track and searched for the wrong thing.
+	
+	\vspace{1cm}
+	
+	As noted by Anthropic, Claude is capable, but not a system that can drive progress on it's own. So, for AI systems to achieve full recursive self improvement, they have to begin building their successors on it's own. However, the pace of AI development is besed on compute and FLOPS. FLOPS is the number that measures compute of a computer or AI model, like Kilowatts. 
+	
+	\subsection{Where does AI development stop?}
+	If we have infinitely improving software (the AI), While the software itself can find ways to rewrite its own code, it will eventually run into physical reality. While hardware is finite, software cannot be infinite. The AI is simply limited by the laws of physics. The Launder Limit states that erasing, changing, or adding a bit of data always requires a minimum amount of energy. An infinitely improving AI would melt its hardware. The Bremermann's Limit calculates the maximum speed at which any piece of matter can process information. A computer can only process about: $$1.36 \times 10^{50}$$ bits per second per kilogram. Once the software reaches this speed, it cannot go any faster without adding more mass. Eventually, the software will reach "peak optimization" where the code is as perfect as mathematically possible with that specific piece of hardware.
+	
+	\part{What Would Have to Happen?}
+	
+	\chapter{The Constraints}
+	
+	What are the constraints against this argument? What holds back from AI ending humanity? This chapter will explore the main constraints holding back form AI truly taking over the world. Because a system having high intelligence doesn't mean it automatically has unlimited access to the physical world, it has limited capability. This will discuss economic, electricity, GPU, CPU, manufacturing, and compute limits. These constraints are crucial to human extinction and how AI might end us. This chapter will reveal what steps we need to take to limit AI's production.
+	
+	\section{Compute Limits}
+	The main limit of AI is compute. AI requires billions of transistors to talk each other. However, bits can not travel faster than the speed of light. If a computer chip is too large, it takes too long for data to travel from one side to the other, causing a bottleneck. Every time b 0 changes to a 1 it produces a small amount of heat. If you pack too much computation into a single space, it will melt itself from this heat. The Bakenstein Bound storage rule dictates the absolute maximum amount of data that can be stored in a physical volume. This is the formula:
+	\[
+	S \leq \frac{2\pi RE}{\hbar c}
+	\]
+	
+	\subsection{Regulatory Thresholds}
+	\begin{description}
+		\item[US Executive Order Limit] Models trained using more than $$10^{26}$$ FLOPs incur strict reporting and dual-use safety tracking obligations.
+		\item[EU AI Act] AI models trained compute exceeding $$10^{25}$$ FLOPs are classified as carrying systematic risks requiring notifications and risk assessments.
+	\end{description}
+	
+	\subsection{Memory Threshold}
+	Peak hardware FLOPs scale 4x every 2 years, where DRAM and interconnect bandwidth grow much slower (1.4x-1.6x). For information to get to a processor, the data has to move through tracks and other IC's on the motherboard. This ultimately slows it down.
+	
+	\section{GPU Limits}
+	For an AI to process information, it needs to go through a GPU (usually multiple). The GPU is a second chip on the computer used to process math and graphics. Every two years, the number of transistors on a chip doubles. However, if the transistors are too small, they are so small that electrons pass over them. This limit we are approaching quickly with advancements in AI and chip design.
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=1.0\linewidth]{../sources/Moors-Law}
+		\caption{Moors Law Chart (Courtesy of Wikipedia)}
+		\label{fig:moors-law}
+	\end{figure}
+	
+	\section{Electricity Limits}
 	
 	
-
 \end{document}
