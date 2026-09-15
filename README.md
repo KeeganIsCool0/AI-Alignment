@@ -1,4 +1,6 @@
+<div align="center">
 # Doomsday: AI Alignment and the End of Humanity
+</div>
 
 <div align="center">
 
